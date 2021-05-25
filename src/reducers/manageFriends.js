@@ -3,10 +3,20 @@ export function manageFriends(
 
   switch(action.type){
     case 'ADD_FRIEND':
-      return Object.assign({}, state, ???)
+      return {...state,
+        friends: [
+        ...state.friends,
+        action.friend
+        ]
+        }
     case 'REMOVE_FRIEND':
       return state
+    default: return state
   }
 
 
 }
+
+
+
+
